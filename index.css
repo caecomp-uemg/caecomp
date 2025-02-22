@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-color: #3D1AFE;
+}
+
+main{
+    position: relative;
+    background-color: #fffcfc;
+    height: 100vh;
+    z-index: 0;
+}
+
+/* navbar */
+
+.navbar {
+    background-color: transparent;
+    padding: 20px;
+}
+
+.navbar-nav {
+    background-color: #e7e4e4ab;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.navbar-toggler:focus {
+    outline: none; 
+    box-shadow: 0 0 2px var(--main-color);
+}
+
+/* botoes */
+
+.btn-instagram{
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: #f7f6f6;
+    font-weight: 400;
+    border-radius: 40px;
+}
+
+.button-instagram{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 80%;
+    bottom: 10%;
+    background-color: var(--main-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* icones e elementos */
+
+.bi-instagram{
+    margin-right: 5px;
+    color: var(--main-color);
+}
+
+.b-insta{
+    font-size: 40px;
+    color: #ffff;
+    margin-right: 0;
+}
+
+.bi-chevron-down {
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 2rem; 
+    color: var(--main-color); 
+    animation: bounce 1.5s infinite; 
+    cursor: pointer; 
+    z-index: 10;
+}
+
+#projetos-extensao{
+    background-color: #EFECEC;
+}
+
+
+/* animacao seta */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px); /* Move a seta para cima */
+    }
+}
+
+.color-span{
+    color: var(--main-color);
+}
+
+/* containers */
+
+.container-content-home{
+    margin-top: 10%;
+}
+
+.container-full{
+    position: relative;
+}
+
+.container-button{
+    background-color: #e7e4e4ab;
+    border-radius: 40px;
+    margin-top: 10%;
+    width: fit-content;
+    z-index: 1;
+}
+
+/* imagens */
+
+.img-blur{
+    position: absolute;
+    width: 100%;
+    transform: scaleX(-1);
+    opacity: 50%;
+    left: 0;
+}
+
+.img-lines-home{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    z-index: -1;
+}
+
+@media (max-width: 320px) or (max-height: 550px) {
+    /* Logo menor */
+    .logo {
+        height: 50px;
+    }
+
+    /* Reduzir título */
+    .container-content-home h1 {
+        font-size: 1.25rem;  /* Menor que o display-5 */
+    }
+
+    /* Ajustar parágrafo */
+    .container-content-home p {
+        font-size: 0.875rem;  /* Tamanho menor */
+    }
+
+    /* Botões menores e com mais padding */
+    .btn {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+
+    /* Ajustar para o botão do Instagram */
+    .btn-instagram {
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+
+    /* Ajustar a imagem do divisor */
+    .img-blur {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajustar posição do ícone da seta */
+    .bi-chevron-down {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Ajustar imagem de linhas */
+    .img-lines-home {
+        width: 60%;
+    }
+    
+    /* Ajustar margem do botão do Instagram */
+    .button-instagram {
+        position: fixed;
+        left: 70%;
+        bottom: 5%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .img-lines-home {
+      width: 50%; /* Para dispositivos pequenos */
+    }
+    .container-button{
+        margin-top: 20%;
+    }
+}
+
+@media (max-height: 840px) and (max-width: 460px) {
+    .button-instagram {
+        display: none;
+    }
+}
